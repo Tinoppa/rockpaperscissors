@@ -31,12 +31,19 @@ h2 {
     margin-top: 2rem;
 }
 
+h3 {
+    text-align: center;
+    padding-top: 2rem;
+    margin-bottom: 0;
+}
 
 .scores_div {
     display: flex;
     justify-content: center;
     margin: 0 auto;
     margin-bottom: 5rem;
+    flex-wrap: wrap;
+
 }
 
 #score-para {
@@ -55,7 +62,7 @@ h2 {
    justify-content: center;
    align-items: center;
    margin: 0 auto;
-   padding: 5rem;
+   padding: 2rem;
    gap: 3rem;
 }
 
@@ -67,6 +74,7 @@ h2 {
 }
 .select:hover {
     background-color: aqua;
+    cursor: pointer;
 }
 .bottom-half {
     display: flex;
@@ -81,4 +89,5 @@ h2 {
 }
 #reset:hover {
     background-color: aqua;
+    cursor: pointer;
 }
