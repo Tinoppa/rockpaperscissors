@@ -36,9 +36,14 @@ h2 {
     display: flex;
     justify-content: center;
     margin: 0 auto;
+    margin-bottom: 5rem;
 }
 
-
+#score-para {
+    text-align: center;
+    font-size: 2rem;
+    
+}
 #player-score {
     text-align: center;
 }
@@ -58,4 +63,22 @@ h2 {
     border-radius: 5px;
     padding: 1rem;
     border: 2px solid white;
+    background-color: darkgrey;
+}
+.select:hover {
+    background-color: aqua;
+}
+.bottom-half {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+#reset {
+    margin: 0 auto;
+    width: 20%;
+    background-color: darkgrey;
+}
+#reset:hover {
+    background-color: aqua;
 }
