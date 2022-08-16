@@ -70,7 +70,7 @@ function singleGame (playerSelection, computerSelection) {
             init();
         }
         
-
+//comment
     }
      else if (playerSelection === "rock" && computerSelection === "paper") {
        // console.log("Paper beats Rock");
