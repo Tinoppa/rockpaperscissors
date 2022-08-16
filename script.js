@@ -1,3 +1,4 @@
+
 // Declare possible options as array
 let options = ["Rock", "Paper", "Scissors"];
 // Declare scores
@@ -10,9 +11,32 @@ return computerSelection;
 }
 
 // Create variables for player and computer selections
-let playerSelection = "rock"
+const buttons = document.getElementsByTagName("button");
+//let playerSelection = '';
 let computerSelection = getComputerChoice();
+let rock = document.getElementById('rock');
+let paper = document.getElementById('paper');
+let scissors = document.getElementById('scissors');
 // Create logic for the game = Rock beats scissors, Paper beats Rock, Scissors beat paper, ties are ties
+
+
+
+rock.addEventListener('click',function(){
+    playerSelection = 'rock'
+    computerSelection = getComputerChoice();
+    singleGame(playerSelection,computerSelection)
+})
+paper.addEventListener('click',function(){
+    playerSelection = 'paper'
+    computerSelection = getComputerChoice();
+    singleGame(playerSelection,computerSelection)
+})
+scissors.addEventListener('click',function(){
+    playerSelection = 'scissors'
+    computerSelection = getComputerChoice();
+    singleGame(playerSelection,computerSelection)
+})
+
 
 // Single round of RSP in the console
 function singleGame (playerSelection, computerSelection) {
@@ -80,5 +104,13 @@ function game () {
 }
 
 
-game();
+//game();
 
+
+
+/* 
+1. I need to store the ID of button clicked by user as the users selection
+2. Once user clicks a button, run the function of the game
+3. 
+
+*/

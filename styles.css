@@ -1,8 +1,61 @@
 * {
-    background-color: black;
-    color: white;
+    background-color: yellow;
+    color: black;
+    font-family: 'Oswald', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    
 }
 
-h1, h2 {
+
+
+h1 {
+    font-size: 4rem;
     text-align: center;
+}
+
+h2 {
+    font-size: 2rem;
+    text-align: center;
+}
+
+.scores {
+    display: flex;
+    flex-direction: column;
+    padding: 1rem;
+    width: 15%;
+    font-size: 2rem;
+    border: 2px solid black;
+    text-align: center;
+    margin-top: 2rem;
+}
+
+
+.scores_div {
+    display: flex;
+    justify-content: center;
+    margin: 0 auto;
+}
+
+
+#player-score {
+    text-align: center;
+}
+#computer-score {
+    text-align: center;
+}
+.buttons {
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   margin: 0 auto;
+   padding: 5rem;
+   gap: 3rem;
+}
+
+.select {
+    border-radius: 5px;
+    padding: 1rem;
+    border: 2px solid white;
 }
