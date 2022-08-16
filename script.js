@@ -1,18 +1,12 @@
 
-// Declare possible options as array
 let options = ["Rock", "Paper", "Scissors"];
-// Declare scores
 let playerScore = 0;
 let computerScore = 0;
 let playerScoreBoard = document.getElementById('player-score');
 let computerScoreBoard = document.getElementById('computer-score');
 const resetBtn = document.getElementById('reset');
 const roundResult = document.getElementById('score-para');
-// Create a function for computers pick, that is random
-function getComputerChoice(){
-let computerSelection = options[Math.floor(Math.random() * options.length )].toLowerCase();
-return computerSelection;
-}
+
 resetBtn.addEventListener('click', init);
 // Create variables for player and computer selections
 const buttons = document.getElementsByTagName("button");
@@ -21,7 +15,14 @@ let computerSelection = getComputerChoice();
 let rock = document.getElementById('rock');
 let paper = document.getElementById('paper');
 let scissors = document.getElementById('scissors');
-// Create logic for the game = Rock beats scissors, Paper beats Rock, Scissors beat paper, ties are ties
+
+// Create a function for computers pick, that is random
+function getComputerChoice(){
+let computerSelection = options[Math.floor(Math.random() * options.length )].toLowerCase();
+return computerSelection;
+}
+
+// Function to reset the game
 
 function init() {
     playerScore = 0;
@@ -48,10 +49,10 @@ scissors.addEventListener('click',function(){
 })
 
 
-// Single round of RSP in the console
+// Game logic
 function singleGame (playerSelection, computerSelection) {
 
-    console.log(computerSelection)
+    
     if (playerScore == 5 || computerScore == 5) {
         init();
         alert ('Game over')
@@ -60,7 +61,7 @@ function singleGame (playerSelection, computerSelection) {
        // console.log("Paper beats Rock");
         computerScore += 1;
         computerScoreBoard.textContent = computerScore;
-        console.log(computerScore)
+        
         roundResult.textContent = 'You Lose!'
     } else if (playerSelection === "rock" && computerSelection === "scissors") {
       //  console.log("Scissors beat Rock");
@@ -96,40 +97,3 @@ function singleGame (playerSelection, computerSelection) {
 
 } 
 
-// Create new function that loops 5 times and keeps score
-
-function game () {
-
-    //computerSelection = getComputerChoice();
-    
-    for (let i = 0; i < 5; i++) {
-        singleGame(playerSelection, computerSelection);
-        console.log(playerScore)
-        console.log(computerScore)
-       /* computerSelection = getComputerChoice();
-        playerSelection = prompt("Select your weapon").toLowerCase()*/
-    }
-    init();
-    if (playerScore > computerScore) {
-        console.log("You won, amazing stuff man!")
-    } else if (playerScore < computerScore) {
-        console.log ("You lost dude")
-    } else {
-        console.log("It's a tie, good shit!")
-    }
-    console.log(`You received a score of: ${playerScore} and the computer received a score of: ${computerScore}`)
-}
-
-
-
-
-//game();
-
-
-
-/* 
-1. I need to store the ID of button clicked by user as the users selection
-2. Once user clicks a button, run the function of the game
-3. Add variables for score fields
-4. Reset the game when either player reaches 5 points
-*/
