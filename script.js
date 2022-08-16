@@ -7,6 +7,7 @@ let computerScoreBoard = document.getElementById('computer-score');
 const resetBtn = document.getElementById('reset');
 const roundResult = document.getElementById('score-para');
 
+
 resetBtn.addEventListener('click', init);
 // Create variables for player and computer selections
 const buttons = document.getElementsByTagName("button");
@@ -51,11 +52,25 @@ scissors.addEventListener('click',function(){
 
 // Game logic
 function singleGame (playerSelection, computerSelection) {
-
+    let result = "";
+    let  winner = "";
     
-    if (playerScore == 5 || computerScore == 5) {
-        init();
-        alert ('Game over')
+    if (playerScore >= 5 || computerScore >= 5) {
+        if (playerScore == 5 && playerScore > computerScore) {
+            console.log("Player Won")
+            winner = "Player";
+            result = alert(`Game over! The winner is ${winner} by  ${playerScore - computerScore} points!`);
+            result;
+            init();
+        } else if (computerScore == 5 && computerScore > playerScore){
+            console.log("Computer Won")
+            winner = "Computer";
+            result = alert(`Game over! The winner is ${winner} by ${computerScore -playerScore} points!`);
+            result;
+            init();
+        }
+        
+
     }
      else if (playerSelection === "rock" && computerSelection === "paper") {
        // console.log("Paper beats Rock");
@@ -93,6 +108,9 @@ function singleGame (playerSelection, computerSelection) {
      roundResult.textContent = "It's a Tie!"
         // If player doesn't choose between the correct options, show this message
     }
+
+    
+ 
    
 
 } 
